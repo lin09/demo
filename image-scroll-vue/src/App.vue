@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <ImageScroll :images="images" height="292px" />
-    <img src="https://lin09.github.io/demo/image-scroll-vue/public/qr.jpg" alt="二维码">
-    <p>扫一扫预览</p>
+    <div>
+      <img src="https://lin09.github.io/demo/image-scroll-vue/public/qr.jpg" alt="二维码">
+      <p>扫一扫预览</p>
+    </div>
   </div>
 </template>
 
@@ -33,16 +35,18 @@ export default {
 
 <style>
 body {
-  margin: 50px 0 0;
+  margin: 0;
+  padding-top: 50px;
   font-size: 36px;
 }
 #app {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  min-height: 800px;
 }
 img {
-  margin-top: 50px;
   width: 200px;
 }
 </style>

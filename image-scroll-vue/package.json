@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@lin09/adaptivejs": "^1.0.1",
-    "@lin09/image-scroll-vue": "^1.0.5",
+    "@lin09/image-scroll-vue": "^1.0.6",
     "@vue/cli-plugin-babel": "^3.5.0",
     "@vue/cli-plugin-eslint": "^3.5.0",
     "@vue/cli-service": "^3.5.0",
