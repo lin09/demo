@@ -683,10 +683,10 @@
   resolved "https://registry.npmjs.org/@lin09/adaptivejs/-/adaptivejs-1.0.1.tgz#4c22b28c6dbf4f3cad1ea482305f88e1dfc11dd1"
   integrity sha512-JDHa0lSteZxqi0HYjOLnxRsy2qlBWXgnJSzyCUHNfCuNagm1kYtoOooi631wtp4nnJU7ZdjtqcWuk/A2IWd+Lw==
 
-"@lin09/image-scroll-vue@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/@lin09/image-scroll-vue/-/image-scroll-vue-1.0.2.tgz#bddfe3af545d43ac6c5deda0faec68f8a2d0aad5"
-  integrity sha512-D9kVJd8AoXOCmLkAGXczbC9CMywNnhW+vrkGN4MPXd62LyQ8Eqj1R66egdY68Dah2NWySoSYJzpD/bIyTSrmWg==
+"@lin09/image-scroll-vue@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.npmjs.org/@lin09/image-scroll-vue/-/image-scroll-vue-1.0.4.tgz#4d3dae0f4cffcd2ca764a5c12920d4bc681e3c2f"
+  integrity sha512-LvIDVTyiH2N8mb7WPU+BtDLwYWFurQLThaSWZZTiR38b7am/TucCcB5A9jBOIkkauFPSa10PeRz8F3aEDXI76A==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"

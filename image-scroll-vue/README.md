@@ -1,5 +1,8 @@
 # image-scroll-vue
+
 * [预览](https://lin09.github.io/demo/image-scroll-vue/dist/index.html)
+
+* ![扫一扫预览](https://lin09.github.io/demo/image-scroll-vue/public/qr.jpg) 扫一扫预览
 
 ## Project setup
 ```
