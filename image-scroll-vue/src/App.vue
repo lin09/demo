@@ -2,7 +2,7 @@
   <div id="app">
     <ImageScroll :images="images" height="292px" />
     <div>
-      <img src="https://lin09.github.io/demo/image-scroll-vue/public/qr.jpg" alt="二维码">
+      <img class="qr" src="https://lin09.github.io/demo/image-scroll-vue/public/qr.jpg" alt="二维码">
       <p>扫一扫预览</p>
     </div>
   </div>
@@ -46,7 +46,7 @@ body {
   justify-content: space-between;
   min-height: 800px;
 }
-img {
+.qr {
   width: 200px;
 }
 </style>
