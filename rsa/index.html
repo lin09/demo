@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>rsa</title>
+  <style>
+    body {
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <div id="encrypt"></div>
+  <script src="https://cdn.bootcss.com/jsencrypt/3.0.0-rc.1/jsencrypt.min.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      // 用服务器公key加密
+      const JsEncrypt = new JSEncrypt()
+      const encrypt = (value, pubKey) => {
+        if (toString.call(value) === toString.call({})) {
+          value = JSON.stringify(value)
+        }
+        pubKey = window.atob(pubKey)
+        JsEncrypt.setPublicKey(pubKey)
+        if (JsEncrypt.getPublicKey().replace(/[\r\n]/g, '') !== pubKey.replace(/[\r\n]/g, '')) {
+          return false
+        }
+        let str = ''
+        // 分段加密的长度
+        const limitLen = 117
+        // 分段加密，未兼容中文长度（建议使用Unicode加密中文）
+        for (let i = 0; i < value.length; i += limitLen) {
+          str += JsEncrypt.encrypt(value.slice(i, i + limitLen))
+        }
+        return str
+      }
+
+      // 测试加密
+      document.getElementById('encrypt').innerText = encrypt({
+        user: 'ttt',
+        passwd: '321'
+      },
+      'LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUlHZk1BMEdDU3FHU0liM0RRRUJBUVVBQTRHTkFEQ0JpUUtCZ1FDL3BUbFZTNTMxY3BMQXVqY2hzUWswTCsxNQorR1ZEMVpuYWpDaHpZM3QvK3pvU3Fadm4yRWJ0V1kxV2l4enZsK1NFcWVSb3RDZWQwRWRRaFJjaVAwcTBDMXNpCnVOdExMZ0g3ekhuK0V3dkZQanBKVlFQMFlSMStGY1RveGtVN2pZRzdRWEFZWE1SbXc2cG9rNERjaGtkc3BIY0gKUXdpa3kzWmRtTzUvUGd6VW1RSURBUUFCCi0tLS0tRU5EIFBVQkxJQyBLRVktLS0tLQo=')
+
+      // 用本地私key解密（把本地公key给服务器加密返回的加密串）
+      const JsDecrypt = new JSEncrypt()
+      const decrypt = value => {
+        // 分段解密的长度
+        const limitLen = 172
+        let valueLen = value.length
+        if (valueLen % limitLen !== 0) {
+          return false
+        }
+
+        let str = ''
+        // 分段解密
+        for (let i = 0; i < valueLen; i += limitLen) {
+          str += JsDecrypt.decrypt(value.slice(i, i + limitLen))
+        }
+
+        try {
+          return JSON.parse(str)
+        } catch (err) {
+          return str
+        }
+      }
+    })
+  </script>
+</body>
+</html>
