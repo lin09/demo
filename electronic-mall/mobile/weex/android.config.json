@@ -1,0 +1,6 @@
+{
+  "AppName":"E-mall",
+  "AppId":"com.e-mall.app",
+  "SplashText":"E-mall",
+  "WeexBundle":"index.js"
+}
