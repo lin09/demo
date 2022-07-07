@@ -1,0 +1,9 @@
+.navigation {
+  display: flex;
+  align-items: stretch;
+}
+
+.navigation-item {
+  flex: 1;
+  flex-direction: column;
+}
