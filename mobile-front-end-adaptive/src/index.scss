@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: auto;
+  width: 750px;
+  font: inherit;
+
+  .adaptive {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 20px solid red;
+    height: 350px;
+    font-size: 32px;
+
+    &:after {
+      display: block;
+      margin-top: 20px;
+      width: 500px;
+      height: 1px;
+      background-color: black;
+      content: ' '
+    }
+  }
+}
