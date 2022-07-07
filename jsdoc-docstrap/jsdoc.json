@@ -1,0 +1,27 @@
+{
+  "tags": {
+    "allowUnknownTags": false
+  },
+  "source": {
+    "include": ["src"]
+  },
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "opts": {
+    "template": "node_modules/ink-docstrap/template",
+    "encoding": "utf8",
+    "destination": "docs/",
+    "recurse": true,
+    "readme": "README.md"
+  },
+  "templates": {
+    "systemName"            : "jsdoc-docstrap-demo",
+    "includeDate"           : false,
+    "navType"               : "inline",
+    "theme"                 : "slate",
+    "linenums"              : true,
+    "outputSourceFiles"     : true,
+    "syntaxTheme"           : "dark"
+  }
+}
