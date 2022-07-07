@@ -1,6 +1,6 @@
 # 使用digi创建一个简单页面
 
-- [实例](https://lin09.github.io/demo/digi-demo/dist/index.html)
+- [实例](https://lin09.github.io/demo/digi/dist/index.html)
 
 ## Project setup
 ```
