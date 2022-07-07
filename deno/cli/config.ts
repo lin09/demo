@@ -1,0 +1,20 @@
+import * as path from "https://deno.land/std/path/mod.ts";
+
+export const htmlName = "index.html";
+export const mainName = "main.ts";
+export const appName = "app.js";
+export const srcDir = "src";
+export const distDir = "dist";
+export const jsDir = "js";
+export const appPath = `/${jsDir}/${appName}`;
+export const bundlePath = "cli/bundle.ts";
+export const htmlPath = path.join(srcDir, htmlName);
+export const mainPath = path.join(srcDir, mainName);
+export const devDir = path.join(distDir, "dev");
+export const devJsDir = path.join(devDir, jsDir);
+export const devHtmlPath = path.join(devDir, htmlName);
+export const devAppPath = path.join(devJsDir, appName);
+export const buildDir = path.join(distDir, "build");
+export const buildJsDir = path.join(buildDir, jsDir);
+export const buildHtmlPath = path.join(buildDir, htmlName);
+export const buildAppPath = path.join(buildJsDir, appName);
