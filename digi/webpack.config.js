@@ -6,7 +6,7 @@ module.exports = (env, argv) => {
 
   return {
     output: {
-      publicPath: devMode ? '/' : '/digi-demo/dist/',
+      publicPath: devMode ? '/' : '/demo/digi/dist/',
       filename: devMode ? 'bundle.js' : 'bundle.[hash].js'
     },
     plugins: [
